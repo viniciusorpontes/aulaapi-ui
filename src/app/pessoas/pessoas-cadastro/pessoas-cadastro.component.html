@@ -1,0 +1,23 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+    <div class="ui-g">
+        <div class="ui-g-12">
+          <h1>{{ editando ? 'Alterar Pessoa' : 'Nova Pessoa' }}</h1>
+        </div>
+
+        <div class="ui-g-12 ui-md-9 ui-fluid">
+          <label>Nome da Pessoa</label>
+          <input pInputText type="text" name="nomepessoa" [(ngModel)]="pessoa.nomepessoa" #nomepessoa="ngModel">
+        </div>
+
+        <div class="ui-g-12">
+            <button pButton type="submit" label="Salvar"></button>
+            &nbsp;
+            <button pButton type="button" label="Novo" class="ui-button-info"></button>
+            &nbsp;
+            <a routerLink="/pessoas">Voltar para Pesquisa</a>
+        </div>
+
+    </div>
+  </form>
+</div>
